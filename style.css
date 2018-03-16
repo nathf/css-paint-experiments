@@ -1,0 +1,47 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 80px 100px 80px;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.star {
+  background: paint(star);
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.star-1 {
+  --star-stroke: slategray;
+  --star-width: 40px;
+  width: 80px;
+}
+
+.star-2 {
+  --star-stroke: saddlebrown;
+}
+
+.star-3 {
+  --star-stroke: goldenrod;
+  --star-width: 40px;
+  width: 80px;
+}
+
+.star-1:hover {
+  --star-fill: lightgrey;
+}
+
+.star-2:hover {
+  
+  --star-fill: burlywood;
+}
+
+.star-3:hover {
+  --star-fill: gold;
+}
