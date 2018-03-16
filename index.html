@@ -11,7 +11,7 @@
 
 <body>
   <script>
-    if ('registerProperty' in CSS) {
+    if ('registerProperty' in CSS && 'paintWorklet' in CSS) {
       CSS.registerProperty({
         name: '--star-fill',
         syntax: '<color>',
@@ -32,12 +32,16 @@
         syntax: '<length>',
         initialValue: '50px'
       });
-    }
 
-    if ('paintWorklet' in CSS) {
       CSS.paintWorklet.addModule('worklet.js');
+    } else {
+      document.body.className = 'noop';
     }
   </script>
+
+  <div class="no-support">
+    <h1>No support for <a href="https://caniuse.com/#feat=css-paint-api"><pre>registerProperty</pre></a> or <a href="https://caniuse.com/#feat=css-paint-api"><pre>paintWorklet</pre></a> in your current browser :(</h1>
+  </div>
 
   <div class="container">
     <div class="star star-1"></div>

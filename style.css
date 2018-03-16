@@ -1,3 +1,16 @@
+body {
+  font-family: sans-serif;
+}
+pre {
+  display: inline-block;
+}
+.no-support {
+  display: none;
+}
+.noop .no-support {
+  display: block;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
