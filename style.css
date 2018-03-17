@@ -28,6 +28,7 @@ pre {
   width: 100px;
   height: 100px;
   cursor: pointer;
+  border: none;
 }
 
 .star-1 {
@@ -46,15 +47,14 @@ pre {
   width: 80px;
 }
 
-.star-1:hover {
+.star-1:hover, .star-1:focus {
   --star-fill: lightgrey;
 }
 
-.star-2:hover {
-  
+.star-2:hover, .star-2:focus  {
   --star-fill: burlywood;
 }
 
-.star-3:hover {
+.star-3:hover, .star-3:focus  {
   --star-fill: gold;
 }
